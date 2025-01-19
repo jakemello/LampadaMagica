@@ -1,0 +1,218 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Sevillana&family=Zen+Maru+Gothic&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Sevillana", serif;
+}
+
+main {
+    background-image: url('./assets/imagemPalacio.png');
+    min-height: 100vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    justify-content: space-evenly;
+    color: #FFF;
+
+    h1 {
+        font-size: 62px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    img {
+        width: 25vw;
+        max-width: 90%;
+        transition: 1s;
+    }
+
+    button {
+        margin-bottom: 10px;
+        border-radius: 50px;
+        border: none;
+        width: 20vw;
+        max-width: 250px;
+        height: 7vh;
+        font-size: 40px;
+        background-color: #007BFF;
+        color: #FFF;
+        cursor: pointer;
+
+        &:hover {
+            box-shadow: 0 0 10px;
+            text-shadow: 1px 1px 2px;
+            scale: 1.1;
+        }
+        
+    }
+    
+}
+
+    .balaoFala {
+        background: #FFD700;
+        border-radius: 30px;
+        position: relative;
+        color: #000;
+        font-size: 32px;
+        opacity: 0;
+        transition: 0.5s;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.3),
+                    inset 0 -4px 10px rgba(0,0,0,0.2),
+                    inset 0 4px 10px rgba(255,255,255,0.2);
+        margin-bottom: 20px;
+        font-family: 'Sevillana', serif;
+        width: 32vw;
+        height: 13vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        border: 2px solid rgba(255,255,255,0.1);
+
+        p {
+            font-weight: bold;
+        }
+          
+
+        &.visivel {
+            opacity: 1;
+            transform: translateY(10px);
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-width: 20px 20px 0;
+            border-style: solid;
+            border-color: #FFD700 transparent;
+            filter: drop-shadow(0 4px 4px rgba(0,0,0,0.2));
+        }
+    }
+
+
+//------------------- Responsividade ------------------- //
+
+@media (max-width: 1200px) {
+    main {
+        
+    h1 {
+        font-size: 72px;
+    }
+
+    img {
+        width: 50vw;
+    }
+
+    button {
+        width: 26vw;
+        height: 6vh;
+        font-size: 36px;
+    }
+
+    .balaoFala {
+        width: 53vw;
+        height: 10vh;
+
+        p {
+            
+            font-size: 25px;
+        }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+    main {
+    h1 {
+        font-size: 48px;
+    }
+
+    img {
+        width: 60vw;
+
+    }
+
+    button {
+        background-color: #B74794;
+        width: 30vw;
+        height: 6vh;
+        font-size: 28px;
+    }
+
+    .balaoFala {
+        width: 50vw;
+        height: 10vh;
+
+        p {
+            font-size: 20px;
+        }
+    }
+  }
+}  
+
+@media (max-width: 480px) {
+    main {
+
+     h1 {
+        font-size: 32px;
+    }
+
+    img {
+        width: 80vw;
+    }
+
+    button {
+        background-color: #B74794;
+        width: 50vw;
+        height: 8vh;
+        font-size: 20px;
+    }
+
+    .balaoFala {
+        width: 60vw;
+        height: 11vh;
+        margin-bottom: 40px;
+
+        p {
+            font-size: 20px;
+        }
+        
+    }
+  }
+}  
+
+@media (max-width: 393px) {
+    main {
+    h1 {
+        font-size: 28px;
+    }
+
+    img {
+        width: 90vw;
+    }
+
+    button {
+        background-color: #B74794;
+        width: 45vw;
+        height: 47px;
+        font-size: 18px;
+    }
+
+    .balaoFala {
+        height: 13vh;
+
+        p {
+            font-size: 20px;
+        }
+    }
+  }
+}
