@@ -1,7 +1,7 @@
 import lampadaMagica from './assets/lampadaMagica.png'
 import genioDaLampada from './assets/genioDaLampada.png'
 import { useState } from 'react'
-import './App.scss'
+import './app.scss'
 
 
 export default function App(){
