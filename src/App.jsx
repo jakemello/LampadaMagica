@@ -14,7 +14,7 @@ export default function App(){
 
  const [lampada, setLampada] = useState(lampadaMagica) // Se fosse usar ' ' seria apenas para tipos de texto, e não iria renderizar a imagem na tag img
  const mudarLampada = () => {
-   setLampada(lampada === lampadaMagica ? genioDaLampada : lampadaMagica)
+   setLampada(lampada === lampadaMagica ? genioDaLampada : lampadaMagica) // Adicionei o Operador ternário (? :) que age como um if...else simplificado no JS
  }
 
 // Arrow Function
@@ -30,5 +30,5 @@ export default function App(){
       <img src={lampada} alt="" />
       <button onClick={mudarLampada}>Clique Aqui</button>
     </main>
-  )
+  ) // Adicionei também ${} (interpolação) que insere variáveis dentro da string para definir dinamicamente a classe CSS
 }
